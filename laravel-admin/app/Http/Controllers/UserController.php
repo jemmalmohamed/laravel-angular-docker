@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateInfoRequest;
 use App\Http\Requests\UserCreateRequest;
 use App\Http\Requests\UserUpdateRequest;
 use App\Models\User;
@@ -48,7 +49,7 @@ class UserController extends Controller
         return Auth::user();
     }
 
-    public function updateInfo(Request $request)
+    public function updateInfo(UpdateInfoRequest $request)
     {
         $user = Auth::user();
         $user->update($request->only('first_name', 'last_name', 'email'));
