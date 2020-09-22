@@ -23,7 +23,7 @@ class AuthController extends Controller
         }
 
         return response([
-            'error' => 'Invalid Credentials'
+            'error' => 'Invalid Credentials '
         ], Response::HTTP_UNAUTHORIZED);
     }
 
