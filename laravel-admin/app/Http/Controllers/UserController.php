@@ -17,7 +17,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        Gate::authorize('view', 'users');
+        Gate::authorize('view', "users");
         $users = User::paginate();
         return    UserResource::collection($users);
     }
