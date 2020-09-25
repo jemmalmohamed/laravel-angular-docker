@@ -29,6 +29,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\OrderItem[] $orderItems
  * @property-read int|null $order_items_count
  * @method static \Illuminate\Database\Eloquent\Builder|Order whereEmail($value)
+ * @property-read mixed $name
  */
 class Order extends Model
 {

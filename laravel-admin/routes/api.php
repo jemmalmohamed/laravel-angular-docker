@@ -7,6 +7,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProductController;
 
 /*
@@ -37,4 +38,6 @@ route::middleware(['auth:api'])->group(function () {
 
     Route::apiResource('orders', OrderController::class)->only('index', 'show');
     Route::get('export', [OrderController::class, 'export']);
+
+    Route::apiResource('permissions', PermissionController::class)->only('index');
 });
