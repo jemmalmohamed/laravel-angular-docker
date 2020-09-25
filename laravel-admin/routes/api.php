@@ -36,4 +36,5 @@ route::middleware(['auth:api'])->group(function () {
     Route::post('upload', [ImageController::class, 'upload']);
 
     Route::apiResource('orders', OrderController::class)->only('index', 'show');
+    Route::get('export', [OrderController::class, 'export']);
 });
